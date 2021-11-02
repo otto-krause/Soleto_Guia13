@@ -8,11 +8,12 @@ int main()
     a = b;
     b = f;
   }
-  int v[b];
+  int v[b-a];
   for(int i = a+1; i < b; i++){
      v[i-a] = i;
   }
   for(int i = a+1; i < b; i++){
-    printf("%d", v[i-a]);
+    printf("[ %d ] ", v[i-a]);
   }
+  puts("\n");
 }
