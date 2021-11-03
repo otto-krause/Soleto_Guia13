@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+  int a;
+  printf("ingrese la cantidad de gastos");
+  scanf("%d", &a);
+  int v[a+2];
+  for (int i = 2; i < a+2; i++){
+    scanf("%d", &v[i]);
+  }
+  v[0] = 0;
+  v[1] = 0;
+  for (int i = 2; i < a+2; i++){
+    v[0] += v[i];
+    if (v[i] > v[1])
+      v[1] = v[i];
+  }
+  printf("el mayor valor es %d y el total es %d\n");
+  return 0;
+}

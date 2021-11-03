@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main(){
+  int v[10];
+  for(int i = 0; i < 10; i++){
+    if (i==9)
+      printf("ingrese dos numeros adicionales (a y b)");
+    scanf("%d", &v[i]);
+  }
+  int a = 0, b = 0;
+  for(int i = 0; i < 8; i++){
+    if(v[i] == v[9]){
+       a++;
+       printf("el valor a se repite en %d\n", i);
+    }
+    if(v[i] == v[10]){
+       b++;
+       printf("el valor b se repite en %d\n", i);
+    } 
+  }
+  printf("a se repite %d veces, b se repite %d veces\n", a, b);
+  return 0;
+}
